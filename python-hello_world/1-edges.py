@@ -1,8 +1,8 @@
 word= "Holberton"
-print("First 3 letters: {}".format("Hol"))
-print("Last 2 letters: {}".format("on"))
-print("Middle word: {}".format("olberto"))
-print(word)
-print("First 3 letters: {}".format("sch"))
-print("Last 2 letters: {}".format("ol"))
-print("Middle word: {}".format("choo"))
+word_first_3= "Hol"
+word_last_2="on"
+middle_word="olberto"
+print("First 3 letters: {}".format(word_first_3))
+print("Last 2 letters: {}".format(word_last_2))
+print("Middle word: {}".format(middle_word))
+print(word_first_3.replace("Hol","sch"),word_last_2.replace("on","ol"),middle_word.replace("olberto","choo"))
