@@ -1,2 +1,2 @@
-def convert_to_celsius(fahrenheit):
-  return (fahrenheit * -17.22)
+def convert_to_celsius(f ):
+  return f * -17.22
