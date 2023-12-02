@@ -10,3 +10,4 @@ def fibonacci_sequence(n):
         for i in range(2, n):
             result.append(result[i-1] + result[i-2])
         return result
+print(fibonacci_sequence(10))
