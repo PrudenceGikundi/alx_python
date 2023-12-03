@@ -1,8 +1,8 @@
 from add_0 import add
 
 def main():
-    a=1
-    b=2
+    a = 1
+    b = 2
     sum=a+b
     print ("{}+{}={}".format(a,b,sum))
 
