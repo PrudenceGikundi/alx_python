@@ -1,5 +1,4 @@
-from add_0 import add
-from add_0 import fakeAdd
+from add_0 import add, fakeAdd
 def main():
     a = 1
     b = 2
