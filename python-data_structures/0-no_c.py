@@ -8,5 +8,5 @@ def no_c(my_string):
         # If true, it is not c or C, so append (+=) the char to new_string
       new_string += char
   return new_string
-print(no_c("I love Coconut and Corn"))
+# print(no_c("I love Coconut and Corn"))
   
