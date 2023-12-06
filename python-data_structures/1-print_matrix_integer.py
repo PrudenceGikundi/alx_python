@@ -4,7 +4,7 @@ def print_matrix_integer(matrix=[[]]):
           [7, 8, 9]]
  
   for row in matrix:
-       print(*[f"{num:d}" for num in row])
-
+    formatted_row = ["{:d}".format(num) for num in row]
+    print(*formatted_row)
 print_matrix_integer()
   
