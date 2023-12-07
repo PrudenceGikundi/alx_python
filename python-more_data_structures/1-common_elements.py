@@ -1,6 +1,11 @@
 def common_elements(set_1, set_2):
+    combinedset = set()
 
-  return set_1, set_2
+    for item in set_1:
+        if item in set_2 :
+            combinedset.add(item)
+
+    return combinedset
 
 
 if __name__=="__main__":
