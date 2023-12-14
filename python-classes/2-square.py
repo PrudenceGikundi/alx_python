@@ -3,7 +3,7 @@ class Square:
   '''class that defines properties of a square'''
   def __init__(self, size=0):
     '''create an instance of a class using the init constructor'''
-    size.__size= size
+    self.__size= size
 
     if not isinstance(size, int):
       raise TypeError("size must be an integer")
