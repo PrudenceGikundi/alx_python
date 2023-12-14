@@ -1,8 +1,4 @@
 '''Define a function BaseGeometry'''
-#!/usr/bin/python
-from collections.abc import Iterable
-
-
 class BaseGeometry:
   '''method raises an exception'''
   def area(self):
