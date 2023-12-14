@@ -1,4 +1,4 @@
-'''import the 7-base_geometry module'''
+'''import the 7-base_rectangle'''
 Rectangle = __import__('7-rectangle').Rectangle
 '''create a square class that inherits rectngle'''
 class Square(Rectangle):
