@@ -1,12 +1,12 @@
 '''create a class Square'''
 class Square:
   '''class that defines properties of a square'''
-  def __init__(self, size):
+  def __init__(self, size=0):
     '''create an instance of a class using the init constructor'''
     size.__size= size
 
   def area(self):
-    return self.__size**2
+    return self.__size ** 2
   @property
   def size(self):
         """Returns the size of a square"""
