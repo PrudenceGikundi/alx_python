@@ -1,3 +1,4 @@
+'''create a class'''
 class square:
   '''CREATES A CLASSS SQUARE AND INITIALIZIES A SQUARE OBJECT WITH A SPECIFIC SIZE'''
   def __init__(self, size):
