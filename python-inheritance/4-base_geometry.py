@@ -1,6 +1,6 @@
 '''Define a function BaesGeometry'''
 class BaseGeometry:
-  '''methhod raises an exception'''
+  '''method raises an exception'''
   def area(self):
      raise Exception("area() is not implemented")
   
