@@ -11,4 +11,5 @@ class Similar():
        indicating that obj is exactly an instance of cls. else, the function returns False
     '''
     return isinstance(obj, cls) and type(obj) == cls
+  '''returns true or false'''
 
