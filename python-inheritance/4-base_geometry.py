@@ -1,4 +1,4 @@
-'''Define a function BaesGeometry'''
+'''Define a function BaseGeometry'''
 class BaseGeometry:
   '''method raises an exception'''
   def area(self):
