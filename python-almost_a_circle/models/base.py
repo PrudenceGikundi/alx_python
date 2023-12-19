@@ -9,4 +9,5 @@ class Base:
       self.id =id
     else:
       '''if it is set to None then the static attribute will be implemented by 1'''
-      Base.__nb_objects
+      Base.__nb_objects += 1
+      self.id = Base.__nb_objects
