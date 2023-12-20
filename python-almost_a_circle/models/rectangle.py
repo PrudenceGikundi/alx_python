@@ -73,6 +73,16 @@ class Rectangle(Base):
   def __str__(self):
     '''this is a string function to overide the printout'''
     return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+  
+  def update(self, *args,**kwags):
+    '''this is a function that assigns an argument to each attribute:'''
+    list=['id','width','height','x','y']
+    for i, args in enumerate(args[:5]):
+      setattr(self,list[i],args)
+      '''kwags arguments'''
+    for key, value in kwags.items():
+      if key in list:
+        setattr(self,key,value)
    
 
 
