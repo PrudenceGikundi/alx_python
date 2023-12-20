@@ -1,5 +1,5 @@
 '''importing the base file'''
-from base import Base
+from models.base import Base
 '''CREATING A CLASS RECTANGLE THAT INHERITS FROM BASE'''
 class Rectangle(Base):
   '''creating instance attribute to contain width and height'''
