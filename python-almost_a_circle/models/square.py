@@ -2,4 +2,5 @@
 from models.rectangle import Rectangle
 '''create a class '''
 class Square(Rectangle):
+  '''a class squre that inherits from Rectangle class'''
   pass
