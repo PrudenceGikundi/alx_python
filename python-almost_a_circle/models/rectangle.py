@@ -64,8 +64,11 @@ class Rectangle(Base):
   
   def display(self):
     '''defining a function that prints customized printout for x, y '''
+    for i in range (self.y):
+      print()
+      '''updating  x and y such that every time they are called its printed blank'''
     for i in range (self.height):
-      print("#" * self.width)
+      print(" " * self.x + "#" * self.width)
 
   def __str__(self):
     '''this is a string function to overide the printout'''
