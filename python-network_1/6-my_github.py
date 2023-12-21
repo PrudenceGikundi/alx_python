@@ -37,10 +37,11 @@ import requests
 from requests.auth import HTTPBasicAuth
 import sys
 
+
 username = sys.argv[1]
 access_token = sys.argv[2]
 
-response = requests.get("https://github.com/PrudenceGikundi", 
+response = requests.get("https://api.github.com/PrudenceGikundi", 
                         auth=HTTPBasicAuth(username, access_token))
 
 if response.status_code == 200:
