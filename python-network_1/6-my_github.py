@@ -40,11 +40,11 @@ import sys
 username = sys.argv[1]
 access_token = sys.argv[2]
 
-response = requests.get("https://api.github.com/user", 
+response = requests.get("https://github.com/PrudenceGikundi", 
                         auth=HTTPBasicAuth(username, access_token))
 
 if response.status_code == 200:
     user_data = response.json()
     print(user_data['id'])
 else:
-    print("Invalid credentials")
+    print("None")
