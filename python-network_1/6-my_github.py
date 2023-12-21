@@ -23,6 +23,6 @@ response = requests.get("https://api.github.com/PrudenceGikundi",
 
 if response.status_code == 200:
     user_data = response.json()
-    print(user_data['id'])
+    print(user_data[''])
 else:
-    print("Invalid credentials")
+    print("None")
