@@ -24,13 +24,10 @@ response = requests.get("https://api.github.com/PrudenceGikundi",
 
 
 try:
-   check_json = response.json()
-   if not check_json:
-    print ("No result")
+   if response.status_code == 200:
+    user_data = response.json()
+    print(user_data['id'])
    else:
-     id =check_json.get("id")
-     name = check_json.get("name")
-     print(f"[{id}] {name}")
+    print("None")
 except ValueError:
-  print("Not a valid JSON")
- 
+  print("None")
