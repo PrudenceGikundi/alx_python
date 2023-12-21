@@ -25,4 +25,4 @@ if response.status_code == 200:
     user_data = response.json()
     print(user_data[''])
 else:
-    print("None")
+    print("")
