@@ -1,4 +1,5 @@
-'''import rectangle module and crate a class square that inherits from it'''
+'''import rectangle module and crate a class square tha
+t inherits from it'''
 from models.rectangle import Rectangle
 '''create a class '''
 class Square(Rectangle):
