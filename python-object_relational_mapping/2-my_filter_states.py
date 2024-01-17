@@ -6,6 +6,7 @@ if __name__ == '__main__':
     mysql_passwd = argv[2]
     db_name = argv[3]
     statename_searched = argv[4]
+    print("The state searched is:  ".format(statename_searched))
 
     conn = MySQLdb.connect(host='localhost', user=mysql_username, passwd=mysql_passwd, port=3306, db=db_name)
     cursor = conn.cursor()
