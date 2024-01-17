@@ -22,3 +22,9 @@ if __name__ == '__main__':
     print(", ".join(cities))
     cursor.close()
     conn.close()
+
+    # for i, state in enumerate(states):
+    #     print(state[0], end='')
+    #     if i < len(states)-1:
+    #         print(', ', end='')
+    # print('')
