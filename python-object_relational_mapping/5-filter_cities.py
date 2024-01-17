@@ -5,8 +5,7 @@ if __name__ == '__main__':
     mysql_username = argv[1]
     mysql_passwd = argv[2]
     db_name = argv[3]
-    # statename_searched = input("enter state name:  ")
-    
+    state_name = argv[4]
 
     conn = MySQLdb.connect(host='localhost', user=mysql_username, passwd=mysql_passwd, port=3306, db=db_name)
     cursor = conn.cursor()
@@ -14,15 +13,12 @@ if __name__ == '__main__':
                FROM cities
                INNER JOIN states ON
                cities.state_id=states.id
-               WHERE state.name = %s
-               ORDER BY cities.id
+               WHERE states.name = %s
+               ORDER BY cities.id ASC
                 """
-    cursor.execute(query, (argv[4],))
+    cursor.execute(query, (state_name,))
     rows = cursor.fetchall()
-    for i, row in enumerate(rows):
-        if i==len(row)-1:
-            print("".join(row[0]),end=' ')
-        else:
-            print("".join(row[0]),end=',')
+    cities = [row[0] for row in rows]
+    print(", ".join(cities))
     cursor.close()
     conn.close()
