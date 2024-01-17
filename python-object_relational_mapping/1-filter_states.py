@@ -7,7 +7,7 @@ if __name__== '__main__':
    MySql_pass= argv[2]
    db_name=argv[3]
 
-   conn= MySQLdb.connect(host='localhost',password=MySql_username,port=3306,username=MySql_username,db=db_name)
+   conn= MySQLdb.connect(host='localhost',passwd=MySql_username,port=3306,user=MySql_username,db=db_name)
    cursor=conn.cursor()
    cursor.execute('SELECT name FROM people WHERE name LIKE "N%" ORDER BY id ASC')
    rows=cursor.fetchall()
