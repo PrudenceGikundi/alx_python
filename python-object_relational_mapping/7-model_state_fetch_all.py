@@ -10,7 +10,7 @@ from sqlalchemy.orm import sessionmaker
 # Create the declarative base
 Base = declarative_base()
 
-# Define the State class
+# Define the State classs
 class State(Base):
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
