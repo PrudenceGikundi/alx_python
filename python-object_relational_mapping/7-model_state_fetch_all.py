@@ -2,6 +2,7 @@
 ''' a script that lists all State objects from the database hbtn_0e_6_usa
      Your script should connect to a MySQL server running on localhost at port 3306
 '''
+from sys import argv
 import sqlalchemy
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
