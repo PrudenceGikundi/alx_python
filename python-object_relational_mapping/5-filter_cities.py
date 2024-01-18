@@ -23,8 +23,9 @@ if __name__ == '__main__':
     cursor.close()
     conn.close()
 
-    # for i, state in enumerate(states):
-    #     print(state[0], end='')
-    #     if i < len(states)-1:
+    # for i, row in enumerate(rows):
+    #     print(row[0], end='')
+    #     if i < len(rows)-1:
     #         print(', ', end='')
     # print('')
+    #arizona,newyork,nairobi
