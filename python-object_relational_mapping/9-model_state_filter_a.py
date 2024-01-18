@@ -1,8 +1,6 @@
-'''All classes that inherit from Base must be imported before calling Base.metadata.create_all(engine)'''
-''' a script that lists all State objects from the database hbtn_0e_6_usa
-     Your script should connect to a MySQL server running on localhost at port 3306
-'''
-
+"""
+Script that lists all State objects that contain the letter a from the database hbtn_0e_6_usa
+"""
 
 import sys
 from sqlalchemy import create_engine
@@ -19,8 +17,8 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Query the database for all State objects
-    states = session.query(State).order_by(State.id).all()
+    # Query the database for all State objects that contain the letter "a"
+    states = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
 
     # Print the results
     for state in states:
