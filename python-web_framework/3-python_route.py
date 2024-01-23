@@ -22,7 +22,7 @@ def c(text):
 def python(text):
    text=text.replace('_', ' ')
    
-   return f'python{text}'
+   return f'python {text}'
 
 
 if __name__=="__main__":
