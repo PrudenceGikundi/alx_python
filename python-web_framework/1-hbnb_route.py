@@ -9,7 +9,10 @@ app= Flask(__name__)
 def hello_world():
 
   return "Hello HBNB!"
-#this condition ensure that the Flask app is run only when the script is executed directly,
-# not when it's imported as a module
+
+@app.route("/hbnb")
+def hello():
+  return "HBNB"
+
 if __name__=="__main__":
   app.run(host='0.0.0.0',port=5000, debug=True)
