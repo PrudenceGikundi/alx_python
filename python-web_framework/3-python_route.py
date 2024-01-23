@@ -19,10 +19,9 @@ def c(text):
     text = text.replace('_', ' ')
     return f'C {text}'
 @app.route("/python/<text>",strict_slashes=False)
-def kendi(word):
-   text='is cool'
+def python(word):
    text=text.replace('_',' ')
-   return f'kendi{word}'
+   return f'python{word}'
 
 if __name__=="__main__":
   app.run(host='0.0.0.0',port=5000, debug=True)
