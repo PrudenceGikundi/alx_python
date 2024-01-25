@@ -84,7 +84,7 @@ def update_user(user_id):
             flash("Error: Name and email are required", "error")
         return redirect(url_for("update_user", user_id=user_id))
     else:
-        return render_template("update_user.html", user=user)
+        return render_template('update_user.html', user=user)
 @app.route('/delete_user/<int:user_id>')
 def delete_user(user_id):
     user = User.query.get(user_id)
