@@ -24,9 +24,9 @@ db = SQLAlchemy(app)
 ############################  TO DO 2 ##############################
 # Define your USER Model class here
 class User(db.Model):
-    id= db.Column(db.Integer, primary_key=True)
-    name= db.Column(db.String(256))
-    email= db.Column(db.String(100), unique=True, nullable=False)
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(56))
+    email = db.Column(db.String(100), unique=True, nullable=False)
     
 #################################################################
 
