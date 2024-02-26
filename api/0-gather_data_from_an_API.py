@@ -23,7 +23,7 @@ completed_task=len(completed)
 
 
 # print('completed')
-print(f"employee {name} is done with tasks ({completed_task}/{total_tasks}):")
+print(f"Employee {name} is done with tasks ({completed_task}/{total_tasks}):")
 
 for i in completed:
   print(f"/t{i}")
