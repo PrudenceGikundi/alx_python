@@ -1,36 +1,36 @@
 import json
-import MySQLdb
-from sys import argv
+import requests
 
 
-if __name__ == '__main__':
-    mysql_username = argv[1]
-    mysql_pass = argv[2]
-    db_name = argv[3]
 
-    conn = MySQLdb.connect(host='localhost', passwd=mysql_pass, port=3306, user=mysql_username, db=db_name)
-    cursor = conn.cursor()
+def get_employee_info(employee_id):
+    """Fetch the employee details from the given URL by appending the employee_id and convert the data to JSON."""
+    employee_url = f'https://jsonplaceholder.typicode.com/users/{employee_id}'
+    employee_response = requests.get(employee_url)
+    employee_data = employee_response.json()
 
-    # Fetch all tasks from all employees
-    cursor.execute('SELECT users.id, users.username, todos.title, todos.completed FROM users JOIN todos ON users.id = todos.userId ORDER BY users.id ASC')
-    rows = cursor.fetchall()
+    """Fetch the employee's todo by appending the todo route to the URL."""
+    todos_url = f'https://jsonplaceholder.typicode.com/users/{employee_id}/todos'
+    todos_response = requests.get(todos_url)
+    todos_data = todos_response.json()
 
-    # Structure the data in JSON format
-    todo_data = {}
-    for row in rows:
-        user_id = row[0]
-        username = row[1]
-        task_title = row[2]
-        completed = bool(row[3])
+    """Compute the number of done tasks and the total number of tasks."""
+    completed_tasks = [{'username': employee_data['username'], 'task': task['title'], 'completed': task['completed']} for task in todos_data]
 
-        if user_id not in todo_data:
-            todo_data[user_id] = []
+    """Return the completed tasks."""
+    return completed_tasks
 
-        todo_data[user_id].append({"username": username, "task": task_title, "completed": completed})
+def export_all_tasks():
+    """Records all tasks from all employees and export data in the JSON format."""
+    all_employees_tasks = {}
 
-    cursor.close()
-    conn.close()
+    # Iterate over employee IDs from 1 to 10 (based on JSONPlaceholder API)
+    for employee_id in range(1, 11):
+        all_employees_tasks[str(employee_id)] = get_employee_info(employee_id)
 
-    # Write JSON data to a file
-    with open('todo_all_employees.json', 'w') as json_file:
-        json.dump(todo_data, json_file)
+    # Writing to JSON file
+    with open("todo_all_employees.json", "w") as json_file:
+        json.dump(all_employees_tasks, json_file, indent=4)
+
+if __name__ == "__main__":
+    export_all_tasks()

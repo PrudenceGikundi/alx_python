@@ -1,4 +1,4 @@
-"""Import the needed modules in alphabetical order"""
+'''importing required libs'''
 import json
 import requests
 import sys
@@ -31,14 +31,7 @@ def get_employee_info(employee_id):
     """Write the json file with the required details"""
     with open(json_file_path, 'w') as json_file:
         json.dump(json_data, json_file, indent=2)
-"""Obtain the employees details from the command line using the sys module"""
+
+'''Exextuing if this is the main script'''
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python script_name.py employee_id.")
-        sys.exit(1)
-
-    """Get the employee id from the second argument"""
-    employee_id = int(sys.argv[1])
-
-    """Call the function with the provided id"""
-    get_employee_info(employee_id)
+    get_employee_info(sys.argv[1])
