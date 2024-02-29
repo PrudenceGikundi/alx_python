@@ -1,6 +1,7 @@
+import csv
 import requests
 import sys
-import csv
+
 
 url = "https://jsonplaceholder.typicode.com/users"
 user_id = sys.argv[1]
