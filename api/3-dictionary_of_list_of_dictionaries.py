@@ -1,6 +1,7 @@
+import json
 import MySQLdb
 from sys import argv
-import json
+
 
 if __name__ == '__main__':
     mysql_username = argv[1]
