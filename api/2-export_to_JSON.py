@@ -2,7 +2,7 @@ import requests
 import sys
 from urllib import response
 
-url="https://jsonplaceholder.typicode.com/users"
+url="https://jsonplaceholder.typicode.com/users/json"
 user_id=sys.argv[1]
 endpoint1= url + "/{}".format(user_id)
 endpoint2= url + "/{}".format(user_id) +"/todos"
